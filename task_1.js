@@ -4,7 +4,7 @@ const ps=require('prompt-sync');
 const prompt=ps() //taking dynamically input from user
 
 const input_string=prompt("Enter input : ");
-const revere_function =(string)=>{
+const reverse_function =(string)=>{
   let reversed_string=[];
   for (let index = input_string.length-1; index >=0; index--) {
     const element = input_string[index];
@@ -12,4 +12,4 @@ const revere_function =(string)=>{
   }
  return reversed_string=reversed_string.join('') 
 }
-console.log( "Reversed String : "+revere_function(input_string))
+console.log( "Reversed String : "+reverse_function(input_string))
