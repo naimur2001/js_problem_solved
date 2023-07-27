@@ -1,10 +1,14 @@
 // Task 6: Create a program that generates a random password of a specified length. The password should include a mix of uppercase letters, lowercase letters, numbers, and special characters.
 
+const ps=require('prompt-sync');
+const prompt=ps();
+
 const uppercase_letters="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 const lowercase_letters="abcdefghijklmnopqrstuvwxyz"
 const special_characters="!@#$%^&*()-_=+[]{}|;:,.<>?"
 const numbers="0123456789"
-const password_length=12;
+
+const password_length=prompt("Enter password length : ");
 
 const random_character=(all_characters)=>{
 let random_index=Math.floor(Math.random()* all_characters.length);
@@ -22,4 +26,4 @@ const random_password=(length)=>{
   }
 return password
 }
-console.log( "Random password is : " +random_password(password_length));
+console.log( "\nRandom password is : " +random_password(password_length));
